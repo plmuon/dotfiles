@@ -1,0 +1,7 @@
+escape ^Ww
+startup_message off
+hardstatus alwayslastline "%w %h"
+# shelltitle "$ |bash"
+# login shell
+# shell fish
+# term xterm-256color
