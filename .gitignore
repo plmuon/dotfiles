@@ -1,2 +1,6 @@
 .bash_history
 .cache
+.*_history
+.password-store
+.erlang.cookie
+.lesshst
