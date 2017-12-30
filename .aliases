@@ -1,34 +1,31 @@
-alias ls='ls --color=auto'
+alias cdqt='cd /ext/qnap/data/bt/complete'
+alias cdsn='cd /data/x/s/norm'
+alias dr='docker run -it --rm'
+alias fe='ftq -e -f'
+alias ff='ftq -f'
+alias g='git'
 alias l='ls -lhL'
 alias la='ls -A'
 alias ll='ls -lh'
-
-alias ss='sudo systemctl'
-
-alias more=less
-alias m=less
-alias s='sudo -E'
-alias root='sudo -i'
-alias pe='ps auxw'
-alias rs='rsync -aHSPv --del'
-alias sc='screen -DRR'
-
+alias ls='ls --color=auto'
+alias m='less'
 alias md='cat /proc/mdstat'
 alias mdpause='sudo sh -c "echo 1 > /sys/block/md0/md/sync_speed_max"'
 alias mdresume='sudo sh -c "echo 200000 > /sys/block/md0/md/sync_speed_max"'
-
-alias g=git
-alias p=pushd
-alias q=popd
-
-alias cdqt='cd /ext/qnap/data/bt/complete'
-alias cdsn="cd $sn"
-alias ff='ftq -f'
-alias fe='ftq -e -f'
-
-alias y=yaourt
+alias mdsp='sudo sh -c "echo 1000 >/proc/sys/dev/raid/speed_limit_max"'
+alias mdsr='sudo sh -c "echo 500000 >/proc/sys/dev/raid/speed_limit_max"'
+alias more='less'
+alias p='pushd'
+alias pe='ps auxw'
+alias q='popd'
+alias root='sudo -i'
+alias rs='rsync -aHSPv --del'
+alias s='sudo -E'
+alias sc='screen -DRR'
+alias ss='sudo systemctl'
+alias y='yaourt'
+alias yf='y -Ss'
+alias yq='y -Q'
+alias yr='y -Rsn'
 alias ys='yaourt -S'
 alias yu='y -Suya'
-alias yf='y -Ss'
-alias yr='y -Rsn'
-alias yq='y -Q'
