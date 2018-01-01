@@ -10,6 +10,8 @@
 	st = status
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	lf = log --oneline --graph --name-status
+	lp = log --oneline --graph -p
 	type = cat-file -t
 	dump = cat-file -p
 	out = log --pretty=oneline --abbrev-commit --graph @{u}..
