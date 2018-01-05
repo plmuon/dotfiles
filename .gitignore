@@ -105,3 +105,13 @@ src
 tex
 tmp
 vmware
+.conan
+.emacs.d/bookmarks
+.emacs.d/session.*
+.*.lock
+.kde4
+.npm
+.*-cookie
+.recently-used*
+.thumbnails
+fontconfig
