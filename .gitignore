@@ -1,6 +1,3 @@
-#.config
-#!.config/i3/
-#!.config/sway/
 .bash_history
 .cache
 .*_history
@@ -14,6 +11,7 @@
 .Xauthority
 .adobe
 .ansible
+.config
 .cups
 .dbus
 .dmrc
@@ -107,7 +105,18 @@ src
 tex
 tmp
 vmware
+<<<<<<< HEAD
 CA
 dead.letter
 go
 run
+.conan
+.emacs.d/bookmarks
+.emacs.d/session.*
+.*.lock
+.kde4
+.npm
+.*-cookie
+.recently-used*
+.thumbnails
+fontconfig
