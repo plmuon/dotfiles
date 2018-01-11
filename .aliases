@@ -1,6 +1,4 @@
 alias suspend='systemctl suspend'
-alias cdqt='cd /ext/qnap/data/bt/complete'
-alias cdsn='cd /data/x/s/norm'
 alias dr='docker run -it --rm'
 alias fe='ftq -e -f'
 alias ff='ftq -f'
