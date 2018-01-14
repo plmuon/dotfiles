@@ -1,4 +1,4 @@
-alias suspend='systemctl suspend'
+alias suspend='sudo systemctl suspend'
 alias dr='docker run -it --rm'
 alias fe='ftq -e -f'
 alias ff='ftq -f'
