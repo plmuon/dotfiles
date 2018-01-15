@@ -14,7 +14,7 @@ stty -ixon
 
 # PS1='[\u@\h \W]\$ '
 # PS1='\[\e]0;\u@\h: \w\a\]\u@\h:\w\$ '
-PS1='\[\e]0;\u@\h: \w\a\]\u@\h:\W\$ '
+PS1='\[\e]0;\u@\h: \w\a\]\h:\w\$ '
 
 function rmext {
   echo "$1" | sed 's/\.[^.]*$//'
