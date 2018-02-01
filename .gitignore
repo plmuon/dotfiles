@@ -19,11 +19,7 @@
 .docker
 .dvdcss
 .eclipse
-.emacs.d/ac-comphist.dat
-.emacs.d/auto-save-list
-.emacs.d/elpa
-.emacs.d/eshell
-.emacs.d/lisp
+.emacs.d
 .esd_auth
 .fontconfig
 .fts
@@ -106,7 +102,6 @@ src
 tex
 tmp
 vmware
-<<<<<<< HEAD
 CA
 dead.letter
 go
