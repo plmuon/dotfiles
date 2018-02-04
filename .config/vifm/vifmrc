@@ -4,19 +4,26 @@
 " The " character at the beginning of a line comments out the line.
 " Blank lines are ignored.
 " The basic format for each item is shown with an example.
+
 set viewcolumns=-{name}...,{mtime},{size}
 set sort=iname,dir
 set timefmt=%d-%m\ %H:%M
 set hlsearch
 set statusline="  Hint: %z%= %A %20u:%-7g %15s %20d  "
+set cpoptions=fs
 set caseoptions=pg
-command! ms ssh sol mv "%f:p" "%D"
-command! msb ssh sol mv "%f:p" "%D" &
+
+command! ms ssh sol mv "%f:p" "%D" &
+command! msf ssh sol mv "%f:p" "%D"
 command! srm ssh sol -t rm -ri "%f:p"
 command! ff clear; ssh sol ftq -f %a | less
 command! sht ssh sol ftsshowtag "%f:p" | less
-command! tag ssh sol ftstag "%f:p" %a | less
+command! tag ssh sol ftstag "%f:p" "%a" | less
 command! untag ssh sol ftsuntag "%f:p" %a | less
+
+nnoremap ,n set sort=iname,dir
+nnoremap ,m set sort=mtime,dir
+nnoremap <c-y> :cd %D<cr>
 
 " This is the actual command used to start vi.  The default is vim.
 " If you would like to use another vi clone such as Elvis or Vile
@@ -213,7 +220,7 @@ filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
         \ smplayer %f 2>/dev/null &,
         \ {View using vlc}
         \ vlc %f 2>/dev/null &,
-		\ {View using ffplay}
+	\ {View using ffplay}
         \ ffplay -fs %f,
         \ {View using Dragon}
         \ dragon %f:p,
@@ -320,6 +327,8 @@ fileviewer *.rar unrar v %c
 
 " IsoMount
 filetype *.iso
+       \ {View using vlc}
+       \ vlc %f 2>/dev/null &,
        \ {Mount with fuseiso}
        \ FUSE_MOUNT|fuseiso %SOURCE_FILE %DESTINATION_DIR,
 
@@ -441,7 +450,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!xterm &<cr>
+" nnoremap ,t :!xterm &<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
@@ -455,7 +464,7 @@ nnoremap ,w :set wrap!<cr>
 nnoremap <f3> :!less %f<cr>
 nnoremap <f4> :edit<cr>
 nnoremap <f5> :copy<cr>
-nnoremap <f6> :move<cr>
+nnoremap <f6> :move&<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
 
