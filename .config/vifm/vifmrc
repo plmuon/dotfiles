@@ -28,6 +28,8 @@ nnoremap <f4> :redraw<cr>
 nnoremap <f5> :redraw<cr>
 nnoremap <f6> :move&<cr>
 
+filextype *.cbz,*.cbr,*.cb7,*.cbt,*.lha mcomix %f 2>/dev/null &
+
 " This is the actual command used to start vi.  The default is vim.
 " If you would like to use another vi clone such as Elvis or Vile
 " you will need to change this setting.
@@ -254,7 +256,7 @@ fileviewer *.[1-8] man ./%c | col -b
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in mcomix}
-		\ mcomix %f &,
+        \ mcomix %f &,
         \ {View in sxiv}
         \ sxiv %f,
         \ {View in gpicview}
