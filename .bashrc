@@ -9,6 +9,7 @@ export VISUAL=vi
 export PAGER=less
 export LESS=-efgiMRX
 # export VMWARE_USE_SHIPPED_LIBS=yes
+export PGHOST=sol
 
 stty -ixon
 
