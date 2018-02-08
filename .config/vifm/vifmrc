@@ -13,7 +13,8 @@ set statusline="  Hint: %z%= %A %20u:%-7g %15s %20d  "
 set cpoptions=fs
 set caseoptions=pg
 
-command! ms ssh sol mv "%f" "%D" &
+" command! ms ssh sol mv "%f" "%D" &
+command! ms ssh sol bin/emv "%d" "%f" "%D" &
 command! msf ssh sol mv "%f" "%D"
 command! srm ssh sol -t rm -ri "%f:p"
 command! ff ff|less
