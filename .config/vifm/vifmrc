@@ -19,8 +19,8 @@ command! msf ssh sol bin/emv "%d" "%f" "%D"
 command! srm ssh sol -t rm -ri "%f:p"
 command! ff ff|less
 command! sht ftq -t "%f"|less
-command! tag fts "%f" -t "%a"|less
-command! untag fts "%f" -u "%a"|less
+command! tag fts "%f" -t %a|less
+command! untag fts "%f" -u %a|less
 
 nnoremap <c-s><c-s> :set sort=iname,dir<cr>
 nnoremap <c-s><c-d> :set sort=mtime,dir<cr>
