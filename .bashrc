@@ -10,6 +10,7 @@ export PAGER=less
 export LESS=-efgiMRX
 # export VMWARE_USE_SHIPPED_LIBS=yes
 export PGHOST=sol
+export WORKON_HOME=~/src/venv
 
 stty -ixon
 
