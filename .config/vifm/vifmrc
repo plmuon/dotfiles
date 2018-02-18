@@ -5,7 +5,7 @@
 " Blank lines are ignored.
 " The basic format for each item is shown with an example.
 
-set viewcolumns=-{name}...,{mtime},{size}
+set viewcolumns=*100{name},{mtime},{size}
 set sort=iname,dir
 set timefmt=%d-%m\ %H:%M
 set hlsearch
@@ -14,8 +14,7 @@ set cpoptions=fs
 set caseoptions=pg
 
 " command! ms ssh sol mv "%f" "%D" &
-command! ms ssh sol bin/emv "%d" "%f" "%D" &
-command! msf ssh sol bin/emv "%d" "%f" "%D"
+command! ms ssh sol bin/emv "%d" "%D" "%f"
 command! srm ssh sol -t rm -ri "%f:p"
 command! ff ff|less
 command! sht ftq -t "%f"|less
