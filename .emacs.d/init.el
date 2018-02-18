@@ -1,22 +1,20 @@
-;(require 'package)
-;(add-to-list 'package-archives
-;			 '("melpa-stable" . "https://stable.melpa.org/packages/")
-;			 )
 ;; require or autoload paredit-mode
-;(add-hook 'clojure-mode-hook #'paredit-mode)
+;;(add-hook 'clojure-mode-hook #'paredit-mode)
 
 (setq package-archives '(("MELPA" . "https://stable.melpa.org/packages/")
 			 ("ELPA"  . "http://elpa.gnu.org/packages/")))
 
-;(setq package-enable-at-startup nil)
+;;(setq package-enable-at-startup nil)
 (package-initialize)
 
-;(load-theme 'alect-dark t)
-;(load-theme 'tango-dark t)
-;(load-theme 'misterioso t)
-;(load-theme 'wombat t)
+;;(load-theme 'alect-dark t)
+;;(load-theme 'tango-dark t)
+;;(load-theme 'misterioso t)
+;;(load-theme 'wombat t)
 (load-theme 'material t)
-(global-linum-mode)
+
+
+;;(global-linum-mode)
 
 ;; voeg M-` toe als save-and-kill
 (defun save-and-kill () "Bewaar en kill buffer" (interactive)
@@ -51,6 +49,11 @@
 	("7356632cebc6a11a87bc5fcffaa49bae528026a78637acd03cae57c091afd9b9" "04dd0236a367865e591927a3810f178e8d33c372ad5bfef48b5ce90d4b476481" "a0feb1322de9e26a4d209d1cfa236deaf64662bb604fa513cca6a057ddf0ef64" default)))
  '(dired-dwim-target t)
  '(dired-use-ls-dired t)
+ '(flycheck-flake8-maximum-line-length 120)
+ '(elpy-test-runner (quote elpy-test-pytest-runner))
+ '(indent-tabs-mode nil)
+ '(pop-up-windows nil)
+ '(column-number-mode t)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(package-selected-packages
