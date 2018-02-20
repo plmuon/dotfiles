@@ -12,6 +12,8 @@ set hlsearch
 set statusline="  Hint: %z%= %A %20u:%-7g %15s %20d  "
 set cpoptions=fs
 set caseoptions=pg
+set dirsize=size
+set trashdir=%r/.vifm-Trash-%u,/home/plm/.vifm-Trash,%r/.vifm-Trash
 
 " command! ms ssh sol mv "%f" "%D" &
 command! ms ssh sol bin/emv "%d" "%D" "%f"
@@ -29,6 +31,7 @@ nnoremap <f5> :redraw<cr>
 nnoremap <f6> :move&<cr>
 
 filextype *.cbz,*.cbr,*.cb7,*.cbt,*.lha mcomix %f 2>/dev/null &
+
 
 " This is the actual command used to start vi.  The default is vim.
 " If you would like to use another vi clone such as Elvis or Vile
