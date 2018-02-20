@@ -118,3 +118,5 @@ run
 fontconfig
 .CLion2017.3
 CLionProjects
+.pgpass
+.vifm-Trash
