@@ -15,7 +15,6 @@ set caseoptions=pg
 set dirsize=size
 set trashdir=%r/.vifm-Trash-%u,/home/plm/.vifm-Trash,%r/.vifm-Trash
 
-" command! ms ssh sol mv "%f" "%D" &
 command! ms ssh sol bin/emv "%d" "%D" "%f"
 command! srm ssh sol -t rm -ri "%f:p"
 command! ff ff|less
@@ -26,9 +25,14 @@ command! untag fts "%f" -u %a|less
 nnoremap <c-s><c-s> :set sort=iname,dir<cr>
 nnoremap <c-s><c-d> :set sort=mtime,dir<cr>
 nnoremap <c-y> :cd %D<cr>
-nnoremap <f4> :redraw<cr>
 nnoremap <f5> :redraw<cr>
-nnoremap <f6> :move&<cr>
+nnoremap <f6> :move
+nnoremap <f4> :mkdir<space>
+" nnoremap <f8> :delete<cr>
+nnoremap <s-f9> :delete<cr>
+nnoremap <f9> :ms<cr>:redraw<cr>
+nnoremap <f8> :tag<space>
+nnoremap <f7> :sht<cr>
 
 filextype *.cbz,*.cbr,*.cb7,*.cbt,*.lha mcomix %f 2>/dev/null &
 
@@ -453,9 +457,9 @@ nnoremap yd :!echo %d | xclip %i<cr>
 nnoremap yf :!echo %c:p | xclip %i<cr>
 
 " Mappings for faster renaming
-nnoremap I cw<c-a>
-nnoremap cc cw<c-u>
-nnoremap A cw
+" nnoremap I cw<c-a>
+" nnoremap cc cw<c-u>
+" nnoremap A cw
 
 " Open console in current directory
 " nnoremap ,t :!xterm &<cr>
@@ -472,8 +476,7 @@ nnoremap ,w :set wrap!<cr>
 " nnoremap <f3> :!less %f<cr>
 " nnoremap <f4> :edit<cr>
 " nnoremap <f5> :copy<cr>
-nnoremap <f7> :mkdir<space>
-nnoremap <f8> :delete<cr>
+" nnoremap <f7> :mkdir<space>
 
 " ------------------------------------------------------------------------------
 
