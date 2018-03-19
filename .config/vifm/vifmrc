@@ -35,6 +35,7 @@ nnoremap <f8> :tag<space>
 nnoremap <f7> :sht<cr>
 
 filextype *.cbz,*.cbr,*.cb7,*.cbt,*.lha mcomix %f 2>/dev/null &
+filextype *.ods libreoffice %f 2>/dev/null &
 
 
 " This is the actual command used to start vi.  The default is vim.

@@ -23,7 +23,7 @@
 ;; eigen keybindings
 (global-set-key [f12] 'save-and-kill)
 (global-set-key "\M-o" 'goto-line)
-(global-set-key "\C-x\C-b" 'electric-buffer-list)
+; (global-set-key "\C-x\C-b" 'electric-buffer-list)
 (global-set-key "\M-_" 'shrink-window)
 (global-set-key "\M-+" 'enlarge-window)
 
