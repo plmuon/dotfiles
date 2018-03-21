@@ -26,6 +26,6 @@ alias ss='sudo systemctl'
 alias t=trizen
 alias tf='t -Ss'
 alias tq='t -Q'
-alias tr='t -Rsnu'
+alias trr='t -Rsnu'
 alias ts='t -S'
 alias tu='t -Suy'
