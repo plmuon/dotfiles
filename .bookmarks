@@ -1,0 +1,18 @@
+sn=/data/x/s/norm
+
+dqt="cd /ext/qnap/data/bt/complete"
+dsat="cd /ext/mars/sat/plm"
+dsi="cd /data/x/mov/sat/inc"
+dao="cd /data/x/mov/arch-old"
+da="cd /data/x/mov/arch"
+dsn="cd /data/x/s/norm"
+
+function hb5 {
+  f=$(rmext "$1")
+  HandBrakeCLI --main-feature --preset-import-gui  --preset 'plm h265' -i "$1" -o "$f".mp4
+}
+
+function hb5d {
+  f=$(rmext "$1")
+  HandBrakeCLI --main-feature --preset-import-gui  --preset 'plm h265 dfast' -i "$1" -o "$f".mp4
+}
