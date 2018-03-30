@@ -13,6 +13,6 @@ export PGHOST=sol
 export WORKON_HOME=~/src/venv
 
 
-~/bin/ki
+[[ -x ~/bin/ki ]] && ~/bin/ki
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
