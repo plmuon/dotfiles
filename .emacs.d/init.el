@@ -1,6 +1,3 @@
-;; require or autoload paredit-mode
-;;(add-hook 'clojure-mode-hook #'paredit-mode)
-
 (setq package-archives '(("MELPA" . "https://stable.melpa.org/packages/")
 			 ("ELPA"  . "http://elpa.gnu.org/packages/")))
 
@@ -32,8 +29,10 @@
 
 (elpy-enable)
 ;; see http://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
-(setq python-shell-interpreter "jupyter"
-      python-shell-interpreter-args "console --simple-prompt")
+;(setq python-shell-interpreter "jupyter"
+;      python-shell-interpreter-args "console --simple-prompt")
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
 ;; see https://realpython.com/blog/python/emacs-the-best-python-editor/
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
