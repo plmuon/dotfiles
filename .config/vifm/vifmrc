@@ -17,7 +17,7 @@ set trashdir=%r/.vifm-Trash-%u,/home/plm/.vifm-Trash,%r/.vifm-Trash
 
 command! ms ssh sol bin/emv "%d" "%D" "%f"
 command! srm ssh sol -t rm -ri "%f:p"
-command! ftq ftq %a|less
+command! ftq ftq %a|less -c
 command! sht ftq -t "%f"|less
 command! tag fts "%f" -t %a|less
 command! untag fts "%f" -u %a|less
