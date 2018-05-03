@@ -1,11 +1,11 @@
 sn=/data/x/s/norm
 
-dqt="cd /ext/qnap/data/bt/complete"
-dsat="cd /ext/mars/sat/plm"
-dsi="cd /data/x/mov/sat/inc"
-dao="cd /data/x/mov/arch-old"
-da="cd /data/x/mov/arch"
-dsn="cd /data/x/s/norm"
+alias dqt='cd /ext/qnap/data/bt/complete'
+alias dsat="cd /ext/mars/sat/plm"
+alias dsi="cd /data/x/mov/sat/inc"
+alias dao="cd /data/x/mov/arch-old"
+alias da="cd /data/x/mov/arch"
+alias dsn="cd /data/x/s/norm"
 
 function hb5 {
   f=$(rmext "$1")
