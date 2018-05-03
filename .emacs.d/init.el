@@ -1,5 +1,5 @@
-(setq package-archives '(("MELPA" . "https://stable.melpa.org/packages/")
-			 ("ELPA"  . "http://elpa.gnu.org/packages/")))
+(setq package-archives '(("MELPA" . "https://melpa.org/packages/")
+			 ("ELPA"  . "https://elpa.gnu.org/packages/")))
 
 ;;(setq package-enable-at-startup nil)
 (package-initialize)
