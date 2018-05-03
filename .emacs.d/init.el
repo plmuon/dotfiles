@@ -22,7 +22,7 @@
 ;; eigen keybindings
 (global-set-key [f12] 'save-and-kill)
 (global-set-key (kbd "S-<f12>") 'kill-sure)
-(global-set-key "\M-o" 'goto-line)
+; (global-set-key "\M-o" 'goto-line) ;; just use M-g g instead
 ; (global-set-key "\C-x\C-b" 'electric-buffer-list)
 (global-set-key "\M-_" 'shrink-window)
 (global-set-key "\M-+" 'enlarge-window)
@@ -69,3 +69,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'narrow-to-region 'disabled nil)
