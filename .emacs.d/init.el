@@ -19,6 +19,9 @@
 (defun kill-sure () "kill buffer" (interactive)
        (kill-buffer))
 
+(defun insert-current-date () (interactive)
+       (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)")))
+
 ;; eigen keybindings
 (global-set-key [f12] 'save-and-kill)
 (global-set-key (kbd "S-<f12>") 'kill-sure)
