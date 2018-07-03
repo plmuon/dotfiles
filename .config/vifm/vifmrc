@@ -6,7 +6,7 @@
 " The basic format for each item is shown with an example.
 
 set viewcolumns=*100{name},{mtime},{size}
-" set sort=iname,dir
+set sort=iname,dir
 set timefmt=%d-%m\ %H:%M
 set hlsearch
 set statusline="  Hint: %z%= %A %20u:%-7g %15s %20d  "
@@ -23,10 +23,10 @@ command! tag fts "%f" -t %a|less
 command! untag fts "%f" -u %a|less
 command! ftd ftd "%f" %a|less
 
-" nnoremap <c-s><c-s> :set sort=iname,dir<cr>
-" nnoremap <c-s><c-d> :set sort=mtime,dir<cr>
-nnoremap <c-s><c-s> :set sort=iname<cr>
-nnoremap <c-s><c-d> :set sort=mtime<cr>
+nnoremap <c-s><c-s> :set sort=iname,dir<cr>
+nnoremap <c-s><c-d> :set sort=mtime,dir<cr>
+" nnoremap <c-s><c-s> :set sort=iname<cr>
+" nnoremap <c-s><c-d> :set sort=mtime<cr>
 nnoremap <c-y> :cd %D<cr>
 nnoremap <f5> :redraw<cr>
 nnoremap <f6> :move&
