@@ -28,3 +28,5 @@ alias yq='y -Q'
 alias yr='y -Rsnu'
 alias ys='y -S'
 alias yu='y -Suy'
+alias b=bspc
+alias j=jobs
