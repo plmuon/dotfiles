@@ -1,3 +1,6 @@
+super + r
+	bspc node -f @parent; bspc node -R 90; bspc node -f last
+
 super + {minus,equal,backslash}
 	bspc node -l {below,normal,above}
 
