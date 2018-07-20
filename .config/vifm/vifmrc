@@ -37,10 +37,13 @@ nnoremap <s-f9> :delete<cr>
 nnoremap <f9> :ms<cr>:redraw<cr>
 nnoremap <f8> :tag<space>
 nnoremap <s-f8> :ftd<space>
-nnoremap <c-f7> :sht<cr>
+nnoremap <c-f8> :sht<cr>
 nnoremap <f7> :ftq -f<space>
 nnoremap b :bmgo<space>
+<<<<<<< HEAD
 nnoremap <c-b> :bmarks<cr>
+=======
+>>>>>>> 2f01ca35919b3c189666b69f42653ea5e58cf9d2
 
 filextype *.cbz,*.cbr,*.cb7,*.cbt,*.lha mcomix %f 2>/dev/null &
 filextype *.ods libreoffice %f 2>/dev/null &
