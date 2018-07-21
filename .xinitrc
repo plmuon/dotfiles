@@ -8,7 +8,7 @@ xsetroot -solid \#001020
 
 xset +dpms
 xset dpms 300 300 300
-xset r rate 200 80
+xset r rate 200 60
 
 numlockx
 urxvt -e screen -UDRR &

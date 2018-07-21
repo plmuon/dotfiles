@@ -1,0 +1,5 @@
+if setxkbmap -query | grep '^variant:.*intl$'; then
+  setxkbmap -layout us
+else
+  setxkbmap -layout us -variant intl
+fi
