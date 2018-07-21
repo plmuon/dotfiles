@@ -1,11 +1,22 @@
+# hide/unhide
+super + shift + h
+	for w in $(bspc query -N -n .local.hidden.window); do bspc node $w -g hidden=off; done
+
+super + h
+	bspc node -g hidden=on
+
+# send to uncle
+super + u
+	bspc node @brother -s @parent/brother; bspc node @parent -s @parent/brother
+
 super + a
 	toggle-pointer_follows_focus
 
 super + z
 	kbd-layout-toggle
 
-super + r
-	bspc node -f @parent; bspc node -R 90; bspc node -f last
+super + {_,shift + }r
+	bspc node -f @parent; bspc node -R {90,270}; bspc node -f last
 
 super + {minus,equal,backslash}
 	bspc node -l {below,normal,above}
