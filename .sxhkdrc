@@ -1,3 +1,6 @@
+super + Caps_Lock
+	kbd-layout-toggle
+
 super + r
 	bspc node -f @parent; bspc node -R 90; bspc node -f last
 
