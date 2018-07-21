@@ -1,0 +1,5 @@
+if [ $(bspc config pointer_follows_focus) = 'true' ]; then
+  bspc config pointer_follows_focus false
+else
+  bspc config pointer_follows_focus true
+fi

@@ -1,3 +1,6 @@
+super + a
+	toggle-pointer_follows_focus
+
 super + z
 	kbd-layout-toggle
 
@@ -14,7 +17,7 @@ ctrl + alt + l
 	slock xset dpms force suspend
 
 ctrl + alt + Delete
-	sudo systemctl suspend;slock
+	lock-suspend
 
 super + shift + {comma,period}
 	bspc node -f @brother ; bspc node -f @{first,second}
