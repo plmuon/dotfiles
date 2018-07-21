@@ -13,7 +13,7 @@ set statusline="  Hint: %z%= %A %20u:%-7g %15s %20d  "
 set cpoptions=fs
 set caseoptions=pg
 set dirsize=size
-" set trashdir=%r/.vifm-Trash-%u,/ext/sol/data/.vifm-Trash-%u,/ext/qnap/.vifm-Trash-%u,/home/plm/.vifm-Trash,%r/.vifm-Trash
+" set trashdir=%r/.vifm-Trash-%u,/data/.vifm-Trash-%u,/ext/qnap/.vifm-Trash-%u,/home/plm/.vifm-Trash,%r/.vifm-Trash
 
 command! ms ssh sol bin/emv "%d" "%D" "%f"
 command! srm ssh sol -t rm -ri "%f:p"
@@ -40,6 +40,7 @@ nnoremap <s-f8> :ftd<space>
 nnoremap <c-f8> :sht<cr>
 nnoremap <f7> :ftq -f<space>
 nnoremap b :bmgo<space>
+nnoremap <c-b> :bmarks<cr>
 
 filextype *.cbz,*.cbr,*.cb7,*.cbt,*.lha mcomix %f 2>/dev/null &
 filextype *.ods libreoffice %f 2>/dev/null &
