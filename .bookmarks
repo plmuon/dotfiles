@@ -1,6 +1,6 @@
 sn=/data/x/s/norm
 
-alias dqt='cd /ext/qnap/data/bt/complete'
+alias dqt='cd /data/inc/complete'
 alias dsat="cd /ext/mars/sat/plm"
 alias dsi="cd /data/x/mov/sat/inc"
 alias dao="cd /data/x/mov/arch-old"
