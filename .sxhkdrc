@@ -2,7 +2,7 @@
 super + shift + /
 	for w in $(bspc query -N -n .local.hidden.window); do bspc node $w -g hidden=off; done
 
-super + h
+super + /
 	bspc node -g hidden=on
 
 # send to uncle
