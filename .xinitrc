@@ -9,6 +9,7 @@ xsetroot -solid \#001020
 xset +dpms
 xset dpms 300 300 300
 xset r rate 200 60
+xautolock -time 15 -locker slock &
 
 numlockx
 urxvt -e screen -UDRR &

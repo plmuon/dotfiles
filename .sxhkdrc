@@ -24,7 +24,7 @@ super + {minus,equal,backslash}
 super + {semicolon,apostrophe}
 	bspc desktop -b {prev,next}; bspc monitor -d I II III IV V VI VII VIII IX X
 
-ctrl + alt + l
+super + Delete
 	slock xset dpms force suspend
 
 ctrl + alt + Delete
