@@ -1,0 +1,6 @@
+amixer set Master unmute
+amixer set Front unmute 100%
+amixer set Surround unmute 100%
+amixer set Center unmute 100%
+amixer set LFE unmute 100%
+amixer set Side unmute 100%

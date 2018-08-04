@@ -1,0 +1,8 @@
+#!/bin/sh
+revert() {
+            xset dpms 300 300 300
+}
+trap revert HUP INT TERM
+xset +dpms dpms 10 10 10
+i3lock -c 203040 -n
+revert
