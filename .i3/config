@@ -1,4 +1,4 @@
-bindsym exec kdb-layout-toggle
+bindsym $mod+backslash exec kbd-layout-toggle
 
 bindsym $mod+m exec i3-input -F 'mark --toggle %s' -l 1 -P 'mark: '
 bindsym $mod+p exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'goto: '
@@ -74,9 +74,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle splitv splith tabbed
 
 # toggle tiling / floating
 bindsym $mod+z floating toggle

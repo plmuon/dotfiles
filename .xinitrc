@@ -1,4 +1,5 @@
-exec >$HOME/.xlog 2>&1
+exec >$HOME/.xlog-stdout
+exec 2>$HOME/.xlog-stderr
 xrdb -load ~/.Xresources
 
 d=$(xinput | awk '/M510/ {print substr($5,4)}')
