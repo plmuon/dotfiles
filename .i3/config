@@ -1,5 +1,12 @@
-bindsym $mod+backslash exec kbd-layout-toggle
+set $mod Mod4
+font pango:DejaVu Sans Mono 10
+floating_modifier $mod
 
+exec_always i3control
+
+# eigen bindings
+
+bindsym $mod+backslash exec kbd-layout-toggle
 bindsym $mod+m exec i3-input -F 'mark --toggle %s' -l 1 -P 'mark: '
 bindsym $mod+p exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'goto: '
 
@@ -16,17 +23,6 @@ bindsym XF86AudioLowerVolume exec audio-down
 bindsym XF86AudioMute exec audio-mute
 bindsym control+mod1+Delete exec i3lockwrapper x
 
-set $mod Mod4
-
-#font pango:monospace 10
-font pango:DejaVu Sans Mono 10
-
-floating_modifier $mod
-#floating_modifier Mod1
-
-exec_always i3control
-
-# bindings
 
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -34,11 +30,12 @@ bindsym $mod+q kill
 bindsym --release button2 kill
 bindsym button3 floating toggle
 
-#bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec rofi -show ssh
 bindsym $mod+space exec rofi -modi drun#run -show drun
 bindsym $mod+Tab exec rofi -show window
 bindsym $mod+grave exec rofi -show windowcd
+
+# defaults (meest)
 
 # change focus
 bindsym $mod+h focus left; exec i3mousefocus
