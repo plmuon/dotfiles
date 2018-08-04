@@ -14,6 +14,8 @@ set cpoptions=fs
 set caseoptions=pg
 set dirsize=size
 " set trashdir=%r/.vifm-Trash-%u,/data/.vifm-Trash-%u,/ext/qnap/.vifm-Trash-%u,/home/plm/.vifm-Trash,%r/.vifm-Trash
+" set trashdir=/data/x/.vifm-Trash-%u,/data/inc/.vifm-Trash-u%,%r/.vifm-Trash-%u,/home/plm/.local/share/vifm/Trash,%r/.vifm-Trash
+" set trashdir=vifm-Trash-%u,/home/plm/.local/share/vifm/Trash,%r/.vifm-Trash
 
 command! ms ssh sol bin/emv "%d" "%D" "%f"
 command! srm ssh sol -t rm -ri "%f:p"

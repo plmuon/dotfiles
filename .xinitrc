@@ -14,4 +14,5 @@ xautolock -time 15 -locker slock &
 numlockx
 urxvt -e screen -UDRR &
 
-exec $HOME/.xinit-bspwm
+#exec $HOME/.xinit-bspwm
+exec i3

@@ -4,5 +4,6 @@ revert() {
 }
 trap revert HUP INT TERM
 xset +dpms dpms 10 10 10
+[ $# -eq 1 ] && sudo systemctl suspend
 i3lock -c 203040 -n
 revert
