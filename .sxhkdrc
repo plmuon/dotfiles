@@ -25,10 +25,10 @@ super + {semicolon,apostrophe}
 	bspc desktop -b {prev,next}; bspc monitor -d I II III IV V VI VII VIII IX X
 
 super + Delete
-	slock xset dpms force suspend
+	slockwrapper
 
 ctrl + alt + Delete
-	lock-suspend
+	slockwrapper heh
 
 super + shift + {comma,period}
 	bspc node -f @brother ; bspc node -f @{first,second}
@@ -54,9 +54,12 @@ super + Return
 	urxvt
 
 # program launcher
-super + @space
-	rofi -show drun
-#	dmenu_run
+super + {_,shift,alt +}@space
+	rofi -show {drun,run,ssh}
+
+# somehow above doesn't work for shift
+super + shift + @space
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -105,6 +108,8 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+super + {_,shift + }{{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -142,6 +147,8 @@ super + shift + {1-9,0}
 # preselect the direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}
@@ -168,5 +175,5 @@ super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + {Left,Down,Up,Right}
+super + ctrl + alt {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
