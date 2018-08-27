@@ -84,6 +84,40 @@
 (helm-autoresize-mode 1)
 (helm-mode 1)
 
+;; rtags
+;; https://vxlabs.com/2016/04/11/step-by-step-guide-to-c-navigation-and-completion-with-emacs-and-the-clang-based-rtags/
+(defun setup-flycheck-rtags ()
+  (interactive)
+  (flycheck-select-checker 'rtags)
+  ;; RTags creates more accurate overlays.
+  (setq-local flycheck-highlighting-mode nil)
+  (setq-local flycheck-check-syntax-automatically nil))
+
+(require 'rtags)
+(setq rtags-display-result-backend 'helm)
+(require 'company)
+(define-key c-mode-base-map (kbd "M-.")
+  (function rtags-find-symbol-at-point))
+(define-key c-mode-base-map (kbd "M-,")
+  (function rtags-find-references-at-point))
+;; install standard rtags keybindings. Do M-. on the symbol below to
+;; jump to definition and see the keybindings.
+(rtags-enable-standard-keybindings)
+;; comment this out if you don't have or don't use helm
+(setq rtags-use-helm t)
+;; company completion setup
+(setq rtags-autostart-diagnostics t)
+(rtags-diagnostics)
+(setq rtags-completions-enabled t)
+(push 'company-rtags company-backends)
+(global-company-mode)
+(define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
+;; use rtags flycheck mode -- clang warnings shown inline
+(require 'flycheck-rtags)
+;; c-mode-common-hook is also called by c++-mode
+(add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -103,7 +137,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (helm dired-du py-autopep8 flycheck elpy material-theme yaml-mode paredit go-mode erlang auto-complete)))
+    (flycheck-rtags company-rtags helm-rtags helm dired-du py-autopep8 flycheck elpy material-theme yaml-mode paredit go-mode erlang auto-complete)))
  '(pop-up-windows nil)
  '(tab-width 8)
  '(tool-bar-mode nil))
