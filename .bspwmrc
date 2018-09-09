@@ -26,5 +26,6 @@ bspc rule -a keepassxc state=floating rectangle=1024x768+1536+672
 bspc rule -a smplayer state=floating
 bspc rule -a vlc state=floating
 bspc rule -a mpv state=floating
+bspc rule -a emacs state=tiled
 #bspc rule -a Kupfer.py focus=on
 #bspc rule -a Screenkey manage=off

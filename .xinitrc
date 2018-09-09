@@ -13,7 +13,10 @@ xset r rate 200 60
 xautolock -time 15 -locker slock &
 
 numlockx
-urxvt -e screen -UDRR &
+
+urxvt &
 
 exec $HOME/.xinit-bspwm
 #exec i3
+#dwmstatus &
+#exec dwm
