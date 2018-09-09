@@ -6,6 +6,7 @@
 !.bookmarks
 !.bspwmrc
 !.config/sway/config
+!.config/termite/config
 !.config/vifm/vifmrc
 !.emacs.d/init.el
 !.emacs.d/site-lisp/auto-complete.el
