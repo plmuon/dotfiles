@@ -28,7 +28,6 @@ set shiftwidth=4
 set noexpandtab
 
 set laststatus=2
-set cursorline
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=darkgray
 
