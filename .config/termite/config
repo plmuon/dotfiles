@@ -44,7 +44,7 @@ cursor_blink = off
 #cursor = #dcdccc
 #cursor_foreground = #dcdccc
 
-#foreground = #dcdccc
+foreground = #dcdcdc
 #foreground_bold = #ffffff
 background = #102030
 

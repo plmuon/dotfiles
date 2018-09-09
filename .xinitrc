@@ -18,3 +18,5 @@ urxvt &
 
 exec $HOME/.xinit-bspwm
 #exec i3
+#dwmstatus &
+#exec dwm
