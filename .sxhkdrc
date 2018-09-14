@@ -1,3 +1,6 @@
+XF86MonBrightness{Down,Up}
+    xbacklight {-,+}5
+
 # hide/unhide
 super + shift + slash
 	for w in $(bspc query -N -n .local.hidden.window); do bspc node $w -g hidden=off; done
