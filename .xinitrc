@@ -14,9 +14,12 @@ xautolock -time 15 -locker slock &
 
 numlockx
 
-urxvt &
+# urxvt &
+st &
 
-exec $HOME/.xinit-bspwm
-#exec i3
+#exec $HOME/.xinit-bspwm
+
+exec i3
+
 #dwmstatus &
 #exec dwm
