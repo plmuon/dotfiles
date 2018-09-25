@@ -3,7 +3,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'davits/YouCompleteMe'
+"Plugin 'davits/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on " required for vundle
