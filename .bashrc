@@ -39,12 +39,12 @@ find0() {
 
 menv() {
     if [[ -z $1 ]]; then return; fi
-    rm -rf ~/src/venv/$1
+    rm -rf ~/$WORKON_HOME/$1
     bazel run $1_devenv | bash -s ~/src/venv/$1
     venv $1
     pip install black rope jedi
 }
 
 venv() {
-    . ~/src/venv/$1/bin/activate
+    . ~/$WORKON_HOME/$1/bin/activate
 }
