@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 exec_always i3control
