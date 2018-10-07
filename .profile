@@ -1,7 +1,7 @@
 #
 # ~/.bash_profile
 #
-PATH=$HOME/bin:$HOME/bin/bspwm:$PATH
+PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BORG_REPO=borg@sol.home:linux

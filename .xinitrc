@@ -14,8 +14,7 @@ xautolock -time 15 -locker slock &
 
 numlockx
 
-# urxvt &
-st &
+urxvt &
 
 #exec $HOME/.xinit-bspwm
 

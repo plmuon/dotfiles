@@ -5,6 +5,7 @@
 !.bashrc
 !.bookmarks
 !.bspwmrc
+!.config/pip/pip.conf
 !.config/sway/config
 !.config/termite/config
 !.config/vifm/vifmrc
