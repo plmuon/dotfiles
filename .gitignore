@@ -6,6 +6,7 @@
 !.bashrc
 !.bookmarks
 !.bspwmrc
+!.config/polybar/config
 !.config/pip/pip.conf
 !.config/sway/config
 !.config/termite/config
@@ -39,3 +40,4 @@
 !bin/i3control
 !bin/i3lockwrapper
 !bin/i3mousefocus
+!bin/slockwrapper
