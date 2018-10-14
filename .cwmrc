@@ -1,0 +1,118 @@
+unbind-key all
+unbind-mouse all
+
+bind-mouse X-1 menu-window
+bind-mouse X-2 menu-group
+bind-mouse X-3 menu-cmd
+bind-mouse M-1 window-move
+bind-mouse M-3 window-resize
+bind-mouse M-2 window-lower
+bind-mouse 4-1 window-move
+bind-mouse 4-3 window-resize
+bind-mouse 4-2 window-lower
+bind-mouse CM-1 window-group
+bind-mouse MS-1 window-hide
+bind-mouse MS-3 window-delete
+bind-mouse M4-1 window-maximize
+bind-mouse M4-3 window-vmaximize
+bind-mouse M4-2 window-hmaximize
+
+bind-key 4-r restart
+bind-key S4-q quit
+bind-key M-Tab window-cycle
+bind-key SM-Tab window-rcycle
+bind-key 4-Tab window-cycle
+bind-key S4-Tab window-rcycle
+bind-key 4-grave window-cycle-ingroup
+bind-key S4-grave window-rcycle-ingroup
+bind-key 4-Return terminal
+bind-key 4-v window-vtile
+bind-key 4-Delete lock
+bind-key CM-Delete slockwrapper x
+
+bind-key 4-z window-hide
+bind-key 4-Next window-lower
+bind-key 4-Prior window-raise
+bind-key 4-q window-delete
+bind-key 4-f window-fullscreen
+bind-key 4-m window-maximize
+bind-key 4-h window-htile
+bind-key 4-v window-vtile
+bind-key S4-Left window-move-left
+bind-key S4-Down window-move-down
+bind-key S4-Up window-move-up
+bind-key S4-Right window-move-right
+bind-key 4-Left window-move-left-big
+bind-key 4-Down window-move-down-big
+bind-key 4-Up window-move-up-big
+bind-key 4-Right window-move-right-big
+bind-key CS4-Left window-resize-left
+bind-key CS4-Down window-resize-down
+bind-key CS4-Up window-resize-up
+bind-key CS4-Right window-resize-right
+bind-key C4-Left window-resize-left-big
+bind-key C4-Down window-resize-down-big
+bind-key C4-Up window-resize-up-big
+bind-key C4-Right window-resize-right-big
+
+bind-key 4-slash menu-window
+bind-key 4-period menu-window-hidden
+bind-key 4-comma menu-cmd
+bind-key 4-semicolon menu-group
+bind-key 4-apostrophe menu-ssh
+
+bind-key 4-a group-toggle-all
+bind-key 4-g window-group
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4-4 group-only-4
+bind-key 4-5 group-only-5
+bind-key 4-6 group-only-6
+bind-key 4-7 group-only-7
+bind-key 4-8 group-only-8
+bind-key 4-9 group-only-9
+bind-key M4-1 group-toggle-1
+bind-key M4-2 group-toggle-2
+bind-key M4-3 group-toggle-3
+bind-key M4-4 group-toggle-4
+bind-key M4-5 group-toggle-5
+bind-key M4-6 group-toggle-6
+bind-key M4-7 group-toggle-7
+bind-key M4-8 group-toggle-8
+bind-key M4-9 group-toggle-9
+bind-key S4-1 window-movetogroup-1
+bind-key S4-2 window-movetogroup-2
+bind-key S4-3 window-movetogroup-3
+bind-key S4-4 window-movetogroup-4
+bind-key S4-5 window-movetogroup-5
+bind-key S4-6 window-movetogroup-6
+bind-key S4-7 window-movetogroup-7
+bind-key S4-8 window-movetogroup-8
+bind-key S4-9 window-movetogroup-9
+bind-key 4-bracketleft group-rcycle
+bind-key 4-bracketright group-cycle
+
+bind-key 4-backslash kbd-layout-toggle
+bind-key XF86AudioRaiseVolume audio-up
+bind-key XF86AudioLowerVolume audio-down
+bind-key XF86AudioMute audio-mute
+
+color activeborder "#80A0E0"
+
+ignore polybar
+ignore polybar-orion_DP-1
+
+command term urxvt
+command lock slockwrapper
+command firefox "firefox -P plmuon"
+command bw "firefox -P bwakker"
+command emacs emacs
+command clion clion
+command vifm "urxvt -e vifm"
+
+gap 16 0 0 0
+
+moveamount 8
+snapdist 4
+sticky yes
