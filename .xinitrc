@@ -14,9 +14,9 @@ xautolock -time 15 -locker slock &
 
 numlockx
 
-polybar -r orion &
 urxvt &
 
+polybar -r orion &
 exec cwm
 
 #exec i3
