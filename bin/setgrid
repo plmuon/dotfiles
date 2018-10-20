@@ -1,0 +1,68 @@
+#!/usr/bin/python
+
+# move current window to position in xy grid.
+# position countng:
+#          x
+# ------------------- top margin
+# +-----+-----+-----+
+# |  1  |  2  |  3  |
+# +-----+-----+-----+ y
+# |  4  |  5  |  6  |
+# +-----+-----+-----+
+import subprocess
+from os import system
+import argparse
+
+
+def xdo_getdisplaygeometry():
+    sub = subprocess.run(
+        ["xdotool", "getdisplaygeometry"], capture_output=True)
+    (xb, yb) = sub.stdout.split()
+    return map(lambda x: int(x), (xb, yb))
+
+
+def xdo_setwindow(px, py, dx, dy):
+    sub = subprocess.run(["xdotool", "getactivewindow"], capture_output=True)
+    aw = sub.stdout.decode().rstrip()
+    system(f"xdotool windowmove {aw} {px} {py}")
+    system(f"xdotool windowsize {aw} {dx} {dy}")
+    system(f"xdotool windowfocus {aw}")
+    system(f"xdotool mousemove --window {aw} {dx/5} {dy/5}")
+
+
+def setwindow(x, y, n, tm, bw):
+    (gx, gy) = xdo_getdisplaygeometry()
+    gx = gx - bw
+    gy = gy - tm - bw
+    n = n - 1
+
+    # grid
+    nx = n % x
+    ny = n // x
+
+    # pixel position
+    px = gx * nx / x
+    py = gy * ny / y + tm
+
+    # size
+    dx = gx/x-bw
+    dy = gy/y-bw
+
+    (px, py, dx, dy) = map(lambda x: round(x), (px, py, dx, dy))
+    xdo_setwindow(px, py, dx, dy)
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument('x', type=int)
+    p.add_argument('y', type=int)
+    p.add_argument('n', type=int)
+    p.add_argument('-t', default=0, type=int, help='top margin')
+    p.add_argument('-b', default=1, type=int, help='border width')
+    args = p.parse_args()
+    setwindow(args.x, args.y, args.n, args.t, args.b)
+
+
+if __name__ == "__main__":
+    # execute only if run as a script
+    main()
