@@ -4,7 +4,7 @@
 
 # All workspaces that start with a string in this list will have their windows
 # open floating
-FLOATING_WORKSPACES = [ '3' ]
+FLOATING_WORKSPACES = [ 'III' ]
 
 def is_ws_floating(name):
     for floating_ws in FLOATING_WORKSPACES:
