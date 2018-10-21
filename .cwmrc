@@ -9,9 +9,14 @@ command vifm "urxvt -e vifm"
 command spotify spotify
 command keepassxc keepassxc
 command transmission-remote-gtk transmission-remote-gtk
+command virtualbox virtualbox
 
 unbind-key all
 unbind-mouse all
+
+bind-key 4-space "rofi -modi drun#run -show drun"
+bind-key M-grave "rofi -show window"
+bind-key SM-grave "rofi -show windowcd"
 
 bind-key 4-KP_Divide "setgrid 2 1 1 -t16 -b1"
 bind-key 4-KP_Multiply "setgrid 2 1 2 -t16 -b1"
