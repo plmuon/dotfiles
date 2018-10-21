@@ -1,3 +1,15 @@
+command term urxvt
+command lock slockwrapper
+command firefox "firefox -P plmuon"
+command bw "firefox -P bwakker"
+command chromium chromium
+command emacs emacs
+command clion clion
+command vifm "urxvt -e vifm"
+command spotify spotify
+command keepassxc keepassxc
+command transmission-remote-gtk transmission-remote-gtk
+
 unbind-key all
 unbind-mouse all
 
@@ -54,6 +66,7 @@ bind-key 4-z window-hide
 bind-key 4-Next window-lower
 bind-key 4-Prior window-raise
 bind-key 4-q window-delete
+bind-key M-F4 window-delete
 bind-key 4-f window-fullscreen
 bind-key 4-m window-maximize
 bind-key 4-h window-htile
@@ -121,16 +134,7 @@ bind-key XF86AudioMute audio-mute
 color activeborder "#80A0E0"
 
 ignore polybar
-ignore polybar-orion_DP-1
-
-command term urxvt
-command lock slockwrapper
-command firefox "firefox -P plmuon"
-command bw "firefox -P bwakker"
-command chromium chromium
-command emacs emacs
-command clion clion
-command vifm "urxvt -e vifm"
+ignore polybar-orion_HDMI-0
 
 gap 16 0 0 0
 
