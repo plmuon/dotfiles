@@ -1,6 +1,5 @@
 ;; require or autoload paredit-mode
 ;(add-hook 'clojure-mode-hook #'paredit-mode)
-
 (setq package-archives '(("MELPA" . "https://melpa.org/packages/")
                          ("ELPA"  . "http://elpa.gnu.org/packages/")))
 
@@ -43,6 +42,7 @@
 (global-set-key "\C-x\C-b" 'electric-buffer-list)
 (global-set-key "\M-_" 'shrink-window)
 (global-set-key "\M-+" 'enlarge-window)
+(global-set-key [?\C-\M-=] 'ff-find-other-file)
 
 ;; cmake
 ;(require 'rtags) ;; optional, must have rtags installed
@@ -89,10 +89,11 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (php-mode sr-speedbar ggtags markdown-preview-mode groovy-mode rtags cmake-ide flycheck-pycheckers flycheck elpy markdown-mode yaml-mode paredit alect-themes)))
+    (magit php-mode sr-speedbar ggtags markdown-preview-mode groovy-mode rtags cmake-ide flycheck-pycheckers flycheck elpy markdown-mode yaml-mode paredit alect-themes)))
  '(pop-up-windows nil)
  '(tab-width 8)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(visible-bell t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
