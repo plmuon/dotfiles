@@ -16,7 +16,6 @@ if [ ! -z ${VIFM+x} ]; then
     PS1="vifm:$PS1"
 fi
 
-
 function rmext {
   echo "$1" | sed 's/\.[^.]*$//'
 }
@@ -39,12 +38,15 @@ find0() {
 
 menv() {
     if [[ -z $1 ]]; then return; fi
-    rm -rf ~/$WORKON_HOME/$1
-    bazel run $1_devenv | bash -s ~/src/venv/$1
+    if [[ -d $WORKON_HOME/$1 ]]; then rm -rf $WORKON_HOME/$1; fi
+    bazel run $1_devenv | bash -s $WORKON_HOME/$1
     venv $1
     pip install black rope jedi
 }
 
 venv() {
-    . ~/$WORKON_HOME/$1/bin/activate
+    if [[ -z $1 ]]; then return; fi
+    . $WORKON_HOME/$1/bin/activate
 }
+
+[[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
