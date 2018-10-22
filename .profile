@@ -8,7 +8,8 @@ export GTK_THEME=Adwaita:dark
 export EDITOR=vi
 export VISUAL=vi
 export PAGER=less
-export LESS=-efgiMRX
+export LESS=-cefgiMRX
 export WORKON_HOME=~/venv
+export LD_LIBRARY_PATH=/usr/local/lib
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
