@@ -1,7 +1,7 @@
 command term urxvt
 command lock slockwrapper
-command firefox "firefox -P plmuon"
-command bw "firefox -P bwakker"
+command firefox "env GTK_THEME=Adwaita:light firefox -P plmuon"
+command bw "env GTK_THEME=Adwaita:light firefox -P bwakker"
 command chromium chromium
 command emacs emacs
 command clion clion
