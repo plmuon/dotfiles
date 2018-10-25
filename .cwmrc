@@ -11,6 +11,10 @@ command keepassxc keepassxc
 unbind-key all
 unbind-mouse all
 
+bind-key 4-space "rofi -modi drun#run -show drun"
+bind-key M-grave "rofi -show window"
+bind-key SM-grave "rofi -show windowcd"
+
 bind-key 4-KP_Divide "setgrid 2 1 1 -t16 -b1"
 bind-key 4-KP_Multiply "setgrid 2 1 2 -t16 -b1"
 bind-key 4-KP_Subtract "setgrid 1 2 1 -t16 -b1"
