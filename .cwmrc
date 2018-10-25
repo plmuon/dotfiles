@@ -1,14 +1,12 @@
 command term urxvt
 command lock slockwrapper
-command firefox "env GTK_THEME=Adwaita:light firefox -P plmuon"
-command bw "env GTK_THEME=Adwaita:light firefox -P bwakker"
+command firefox "env GTK_THEME=Adwaita:light firefox"
 command chromium chromium
 command emacs emacs
 command clion clion
 command vifm "urxvt -e vifm"
 command spotify spotify
 command keepassxc keepassxc
-command transmission-remote-gtk transmission-remote-gtk
 command virtualbox virtualbox
 
 unbind-key all
