@@ -1,6 +1,6 @@
 command term urxvt
 command lock slockwrapper
-command firefox firefox
+command firefox "env GTK_THEME=Adwaita:light firefox"
 command chromium chromium
 command emacs emacs
 command clion clion
