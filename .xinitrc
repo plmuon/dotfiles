@@ -5,7 +5,7 @@ xrdb -load ~/.Xresources
 d=$(xinput | awk '/M510/ {print substr($5,4)}')
 xinput set-button-map $d 1 2 3 4 5 6 7 9 8
 
-xsetroot -solid \#001020
+xsetroot -solid \#003040
 
 xset +dpms
 xset dpms 300 300 300
@@ -16,9 +16,10 @@ numlockx
 
 urxvt &
 
+polybar -r orion &
+exec cwm
+
+#exec i3
 #exec $HOME/.xinit-bspwm
-
-exec i3
-
 #dwmstatus &
 #exec dwm
