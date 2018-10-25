@@ -2,7 +2,7 @@ URxvt.font: xft:liberation mono:size=9
 URxvt.reverseVideo: true
 URxvt.foreground: \#001020
 URxvt.scrollBar: false
-;URxvt.geometry: 80x40
+URxvt.visualBell: true
 ;URxvt.perl-ext-common: tabbed
 ;URxvt.tabbed.tabbar-fg: 6
 ;URxvt.tabbed.tabbar-bg: 0
