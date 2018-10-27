@@ -74,8 +74,10 @@ bind-key 4-q window-delete
 bind-key M-F4 window-delete
 bind-key 4-f window-fullscreen
 bind-key 4-m window-maximize
-bind-key 4-h window-htile
+bind-key 4-n window-vmaximize
+bind-key 4-b window-hmaximize
 bind-key 4-v window-vtile
+bind-key 4-h window-htile
 bind-key S4-Left window-move-left
 bind-key S4-Down window-move-down
 bind-key S4-Up window-move-up
