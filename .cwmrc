@@ -7,7 +7,6 @@ command clion clion
 command vifm "urxvt -e vifm"
 command spotify spotify
 command keepassxc keepassxc
-command virtualbox virtualbox
 
 unbind-key all
 unbind-mouse all
@@ -26,15 +25,31 @@ bind-key M4-KP_Up "setgrid 2 2 2 -t16 -b1"
 bind-key M4-KP_Left "setgrid 2 2 3 -t16 -b1"
 bind-key M4-KP_Begin "setgrid 2 2 4 -t16 -b1"
 
-bind-key 4-KP_Prior "setgrid 3 3 3 -t16 -b1"
-bind-key 4-KP_Up "setgrid 3 3 2 -t16 -b1"
-bind-key 4-KP_Home "setgrid 3 3 1 -t16 -b1"
-bind-key 4-KP_Right "setgrid 3 3 6 -t16 -b1"
-bind-key 4-KP_Begin "setgrid 3 3 5 -t16 -b1"
-bind-key 4-KP_Left "setgrid 3 3 4 -t16 -b1"
-bind-key 4-KP_Next "setgrid 3 3 9 -t16 -b1"
-bind-key 4-KP_Down "setgrid 3 3 8 -t16 -b1"
-bind-key 4-KP_End "setgrid 3 3 7 -t16 -b1"
+bind-key M4-KP_End "setgrid 3 1 1 -t16 -b1"
+bind-key M4-KP_Down "setgrid 3 1 2 -t16 -b1"
+bind-key M4-KP_Next "setgrid 3 1 3 -t16 -b1"
+
+bind-key 4-KP_Home "setgrid 3 2 1 -t16 -b1"
+bind-key 4-KP_Up "setgrid 3 2 2 -t16 -b1"
+bind-key 4-KP_Prior "setgrid 3 2 3 -t16 -b1"
+bind-key 4-KP_Left "setgrid 3 2 4 -t16 -b1"
+bind-key 4-KP_Begin "setgrid 3 2 5 -t16 -b1"
+bind-key 4-KP_Right "setgrid 3 2 6 -t16 -b1"
+
+bind-key 4-KP_End "setgrid 3 1 1 -t16 -b1"
+bind-key 4-KP_Down "setgrid 3 1 2 -t16 -b1"
+bind-key 4-KP_Next "setgrid 3 1 3 -t16 -b1"
+
+bind-key C4-KP_Home "setgrid 3 3 1 -t16 -b1"
+bind-key C4-KP_Up "setgrid 3 3 2 -t16 -b1"
+bind-key C4-KP_Prior "setgrid 3 3 3 -t16 -b1"
+bind-key C4-KP_Left "setgrid 3 3 4 -t16 -b1"
+bind-key C4-KP_Begin "setgrid 3 3 5 -t16 -b1"
+bind-key C4-KP_Right "setgrid 3 3 6 -t16 -b1"
+bind-key C4-KP_End "setgrid 3 3 7 -t16 -b1"
+bind-key C4-KP_Down "setgrid 3 3 8 -t16 -b1"
+bind-key C4-KP_Next "setgrid 3 3 9 -t16 -b1"
+
 bind-key 4-KP_Insert "setgrid 1 1 1 -t16 -b1"
 
 bind-mouse X-1 menu-window
@@ -72,8 +87,10 @@ bind-key 4-q window-delete
 bind-key M-F4 window-delete
 bind-key 4-f window-fullscreen
 bind-key 4-m window-maximize
-bind-key 4-h window-htile
+bind-key 4-n window-vmaximize
+bind-key 4-b window-hmaximize
 bind-key 4-v window-vtile
+bind-key 4-h window-htile
 bind-key S4-Left window-move-left
 bind-key S4-Down window-move-down
 bind-key S4-Up window-move-up
@@ -96,6 +113,10 @@ bind-key 4-period menu-window-hidden
 bind-key 4-comma menu-cmd
 bind-key 4-semicolon menu-group
 bind-key 4-apostrophe menu-ssh
+bind-key 4-space "rofi -modi drun#run -show drun"
+bind-key M-Tab "rofi -show window"
+bind-key M-grave "rofi -show windowcd"
+
 
 bind-key 4-a group-toggle-all
 bind-key 4-g window-group
