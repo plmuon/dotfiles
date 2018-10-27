@@ -13,16 +13,6 @@ set statusline="  Hint: %z%= %A %20u:%-7g %15s %20d  "
 set cpoptions=fs
 set caseoptions=pg
 set dirsize=size
-" set trashdir=%r/.vifm-Trash-%u,/data/.vifm-Trash-%u,/ext/qnap/.vifm-Trash-%u,/home/plm/.vifm-Trash,%r/.vifm-Trash
-" set trashdir=/data/x/.vifm-Trash,/data/inc/.vifm-Trash,%r/.vifm-Trash
-
-command! ms ssh sol bin/emv "%d" "%D" "%f"
-command! srm ssh sol -t rm -ri "%f:p"
-command! ftq ftq %a|less -c
-command! sht ftq -t "%c"|less
-command! tag fts "%f" -t %a|less
-command! untag fts "%f" -u %a|less
-command! ftd ftd "%f" %a|less
 
 nnoremap <c-s><c-s> :set sort=iname,dir<cr>
 nnoremap <c-s><c-d> :set sort=mtime,dir<cr>
@@ -34,9 +24,6 @@ nnoremap <f6> :move&
 nnoremap <c-f6> :copy&
 nnoremap <f4> :mkdir<space>
 " nnoremap <f8> :delete<cr>
-nnoremap <f9> :ms<cr>:redraw<cr>
-nnoremap <f8> :tag<space>
-nnoremap <f7> :ftq -f<space>
 nnoremap b :bmgo<space>
 nnoremap <c-b> :bmarks<cr>
 
