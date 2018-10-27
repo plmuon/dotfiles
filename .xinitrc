@@ -11,15 +11,9 @@ xset +dpms
 xset dpms 300 300 300
 xset r rate 200 60
 xautolock -time 15 -locker slock &
-
 numlockx
 
 urxvt &
 
 polybar -r orion &
 exec cwm
-
-#exec i3
-#exec $HOME/.xinit-bspwm
-#dwmstatus &
-#exec dwm
