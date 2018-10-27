@@ -1,4 +1,4 @@
-URxvt.font: xft:ubuntu mono:size=12
+URxvt.font: xft:liberation mono:size=9
 URxvt.reverseVideo: true
 URxvt.foreground: \#001020
 URxvt.scrollBar: false
