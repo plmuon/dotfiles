@@ -2,9 +2,4 @@ URxvt.font: xft:ubuntu mono:size=12
 URxvt.reverseVideo: true
 URxvt.foreground: \#001020
 URxvt.scrollBar: false
-;URxvt.geometry: 80x40
-;URxvt.perl-ext-common: tabbed
-;URxvt.tabbed.tabbar-fg: 6
-;URxvt.tabbed.tabbar-bg: 0
-;URxvt.tabbed.tab-fg: 9
-;URxvt.tabbed.tab-bg: 0
+URxvt.visualBell: true
