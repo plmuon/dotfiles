@@ -34,11 +34,8 @@ nnoremap <f6> :move&
 nnoremap <c-f6> :copy&
 nnoremap <f4> :mkdir<space>
 " nnoremap <f8> :delete<cr>
-nnoremap <s-f9> :delete<cr>
 nnoremap <f9> :ms<cr>:redraw<cr>
 nnoremap <f8> :tag<space>
-" nnoremap <s-f8> :ftd<space>
-" nnoremap <c-f8> :sht<cr>
 nnoremap <f7> :ftq -f<space>
 nnoremap b :bmgo<space>
 nnoremap <c-b> :bmarks<cr>
