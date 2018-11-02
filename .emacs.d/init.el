@@ -1,37 +1,15 @@
 ;; require or autoload paredit-mode
 ;(add-hook 'clojure-mode-hook #'paredit-mode)
 (setq package-archives '(("MELPA" . "https://melpa.org/packages/")
-                         ("ELPA"  . "http://elpa.gnu.org/packages/")))
-
-;; installed alect-themes as elpa package, therefore:
-(setq package-enable-at-startup nil)
+                         ("ELPA"  . "https://elpa.gnu.org/packages/")))
 (package-initialize)
-
-;(load-theme 'alect-dark t)
-;(load-theme 'tango-dark t)
-;(load-theme 'misterioso t)
 (load-theme 'wombat t)
-;;(global-linum-mode)
 
-(elpy-enable)
-;;(pyvenv-workon "wolfgang")
-
-;; see http://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
-(setq python-shell-interpreter "python"
-      python-shell-interpreter-args "-i")
-;;(setq python-shell-interpreter "ipython"
-;;      python-shell-interpreter-args "-i --simple-prompt")
-
-;; see https://realpython.com/blog/python/emacs-the-best-python-editor/
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
-;(require 'py-autopep8)
-;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
-
-;; voeg M-` toe als save-and-kill
 (defun save-and-kill () "Bewaar en kill buffer" (interactive)
-  (save-buffer) (kill-buffer (current-buffer)))
+       (save-buffer) (kill-buffer (current-buffer)))
+
+(defun save-copy (fname) "save current buffer as copy in other file" (interactive "F")
+       (write-region (point-min) (point-max) fname))
 
 (defun save-copy (fname) "save current buffer as copy in other file" (interactive "F")
        (write-region (point-min) (point-max) fname))
@@ -44,9 +22,21 @@
 (global-set-key "\M-+" 'enlarge-window)
 (global-set-key [?\C-\M-=] 'ff-find-other-file)
 
-;; cmake
-;(require 'rtags) ;; optional, must have rtags installed
-;(cmake-ide-setup)
+(elpy-enable)
+;; see http://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
+;;(setq python-shell-interpreter "jupyter"
+;;      python-shell-interpreter-args "console --simple-prompt")
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
+;;(setq python-shell-interpreter "python"
+;;      python-shell-interpreter-args "-i")
+
+;; see https://realpython.com/blog/python/emacs-the-best-python-editor/
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;; https://tuhdo.github.io/c-ide.html
 (require 'ggtags)
@@ -63,8 +53,6 @@
 (define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
 
 (define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
-
-
 
 (setq split-height-threshold 0)
 (setq split-width-threshold 0)
@@ -89,7 +77,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (magit php-mode sr-speedbar ggtags markdown-preview-mode groovy-mode rtags cmake-ide flycheck-pycheckers flycheck elpy markdown-mode yaml-mode paredit alect-themes)))
+    (groovy-mode markdown-mode blacken flycheck-rtags company-rtags helm-rtags helm dired-du py-autopep8 flycheck elpy material-theme yaml-mode paredit go-mode erlang auto-complete)))
  '(pop-up-windows nil)
  '(tab-width 8)
  '(tool-bar-mode nil)
@@ -100,6 +88,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#242424" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "1ASC" :family "Liberation Mono")))))
-
-(put 'dired-find-alternate-file 'disabled nil)
-(put 'scroll-left 'disabled nil)

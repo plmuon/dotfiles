@@ -24,7 +24,6 @@ nnoremap <f6> :move&
 nnoremap <c-f6> :copy&
 nnoremap <f4> :mkdir<space>
 " nnoremap <f8> :delete<cr>
-nnoremap <s-f9> :delete<cr>
 nnoremap b :bmgo<space>
 nnoremap <c-b> :bmarks<cr>
 
